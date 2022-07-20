@@ -1,0 +1,3979 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    141480,       3971]
+NotebookOptionsPosition[    138745,       3919]
+NotebookOutlinePosition[    139195,       3937]
+CellTagsIndexPosition[    139152,       3934]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{"Get", "[", 
+  "\"\</Users/danielweiss/Desktop/Desktop - Daniel\[CloseCurlyQuote]s MacBook \
+Pro/cQED Research/Thesis/Schrieffer-Wolff/SWT.wl\>\"", 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"<<", "sneg`sneg`"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.8672639466594257`*^9, 3.867263948844283*^9}, {
+   3.867264245733721*^9, 3.8672642669439287`*^9}, {3.867264310558964*^9, 
+   3.867264366891872*^9}, 3.867264572405308*^9, 3.867264605683646*^9, {
+   3.8672647684785*^9, 3.8672647713902903`*^9}, {3.867268945046563*^9, 
+   3.867268998018197*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"6af34e7e-e20b-4e95-aeb3-d85edb22a59f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"sneg 1.250 Copyright (C) 2016 Rok Zitko\"\>"], "Print",
+ CellChangeTimes->{
+  3.855422483773356*^9, 3.855423892558432*^9, 3.855424418428418*^9, 
+   3.855490633094133*^9, 3.8554906674117393`*^9, 3.8555043877417917`*^9, 
+   3.855505336039455*^9, {3.8555979407014303`*^9, 3.8555979507899303`*^9}, {
+   3.8556545574418592`*^9, 3.855654575315201*^9}, 3.855687814194162*^9, 
+   3.855740420755823*^9, 3.855740459953836*^9, 3.855848130674767*^9, 
+   3.856970764409255*^9, 3.856973447288097*^9, 3.865680438870949*^9, 
+   3.865688837275073*^9, 3.865688916291337*^9, 3.865693052766168*^9, 
+   3.865693284693926*^9, 3.86569344893377*^9, 3.86569356176086*^9, 
+   3.865693697026019*^9, 3.865693800858375*^9, 3.8656939455969467`*^9, 
+   3.8656941149179983`*^9, 3.86569418467356*^9, 3.8656944108916073`*^9, 
+   3.865694639511376*^9, 3.865694847467874*^9, 3.865696102532672*^9, 
+   3.865766600689414*^9, 3.8657671123021708`*^9, 3.866017676288375*^9, 
+   3.8667353513409653`*^9, 3.8672643158614683`*^9, {3.86726436031979*^9, 
+   3.867264367751698*^9}, 3.8672643981108513`*^9, 3.867264781518347*^9, 
+   3.86726492266463*^9, 3.867268945777256*^9, {3.867268998697914*^9, 
+   3.867269010469339*^9}},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"2d16238f-b155-41ba-a848-de31d68cd2b1"],
+
+Cell[BoxData["\<\"sneg 1.250 Copyright (C) 2016 Rok Zitko\"\>"], "Print",
+ CellChangeTimes->{
+  3.855422483773356*^9, 3.855423892558432*^9, 3.855424418428418*^9, 
+   3.855490633094133*^9, 3.8554906674117393`*^9, 3.8555043877417917`*^9, 
+   3.855505336039455*^9, {3.8555979407014303`*^9, 3.8555979507899303`*^9}, {
+   3.8556545574418592`*^9, 3.855654575315201*^9}, 3.855687814194162*^9, 
+   3.855740420755823*^9, 3.855740459953836*^9, 3.855848130674767*^9, 
+   3.856970764409255*^9, 3.856973447288097*^9, 3.865680438870949*^9, 
+   3.865688837275073*^9, 3.865688916291337*^9, 3.865693052766168*^9, 
+   3.865693284693926*^9, 3.86569344893377*^9, 3.86569356176086*^9, 
+   3.865693697026019*^9, 3.865693800858375*^9, 3.8656939455969467`*^9, 
+   3.8656941149179983`*^9, 3.86569418467356*^9, 3.8656944108916073`*^9, 
+   3.865694639511376*^9, 3.865694847467874*^9, 3.865696102532672*^9, 
+   3.865766600689414*^9, 3.8657671123021708`*^9, 3.866017676288375*^9, 
+   3.8667353513409653`*^9, 3.8672643158614683`*^9, {3.86726436031979*^9, 
+   3.867264367751698*^9}, 3.8672643981108513`*^9, 3.867264781518347*^9, 
+   3.86726492266463*^9, 3.867268945777256*^9, {3.867268998697914*^9, 
+   3.8672690107696037`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"00e79aeb-bebb-478c-bb99-dc6b52bc5abb"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[TextData[StyleBox["Test: transmon + resonator",
+ FontSize->36]], "Text",
+ CellChangeTimes->{{3.855661851749672*^9, 3.855661858813965*^9}, {
+  3.86726901274868*^9, 
+  3.867269014305479*^9}},ExpressionUUID->"ef4ceaca-48cc-4f0e-8d60-\
+f6fd2b0a93b0"],
+
+Cell[TextData[StyleBox["Define Hamiltonian",
+ FontSize->24]], "Text",
+ CellChangeTimes->{{3.855507303349601*^9, 
+  3.855507307193533*^9}},ExpressionUUID->"482df71d-516c-43c8-922e-\
+413eea710a24"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Pij", "[", 
+   RowBox[{"i_", ",", "j_"}], "]"}], ":=", 
+  RowBox[{"nc", "[", 
+   RowBox[{
+    RowBox[{"ket", "[", 
+     RowBox[{"i", ",", "j"}], "]"}], ",", 
+    RowBox[{"bra", "[", 
+     RowBox[{"i", ",", "j"}], "]"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dimtmon", "=", "6"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dimres", "=", "6"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Evalsq", "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      SubscriptBox["Eq", "i"], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "0", ",", 
+        RowBox[{"dimtmon", "-", "1"}]}], "}"}]}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"gijs", "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"ToExpression", "[", 
+       RowBox[{"StringJoin", "[", 
+        RowBox[{"\"\<g\>\"", ",", 
+         RowBox[{"ToString", "[", "i", "]"}], ",", 
+         RowBox[{"ToString", "[", "j", "]"}]}], "]"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "0", ",", 
+        RowBox[{"dimtmon", "-", "1"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", 
+        RowBox[{"dimtmon", "-", "1"}]}], "}"}]}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", 
+  RowBox[{
+   RowBox[{"snegrealconstants", "[", 
+    RowBox[{"Evalsq", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", "1", ",", 
+     RowBox[{"Length", "[", "Evalsq", "]"}]}], "}"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"snegrealconstants", "[", "Er", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", 
+  RowBox[{
+   RowBox[{"snegrealconstants", "[", 
+    RowBox[{"gijs", "[", 
+     RowBox[{"[", "i", "]"}], "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", "1", ",", 
+     RowBox[{"Length", "[", "gijs", "]"}]}], "}"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"aop", "=", 
+   RowBox[{"Sum", "[", 
+    RowBox[{
+     RowBox[{
+      SqrtBox[
+       RowBox[{"nocc", "+", "1"}]], 
+      RowBox[{"nc", "[", 
+       RowBox[{
+        RowBox[{"ket", "[", 
+         RowBox[{"Null", ",", "nocc"}], "]"}], ",", 
+        RowBox[{"bra", "[", 
+         RowBox[{"Null", ",", 
+          RowBox[{"nocc", "+", "1"}]}], "]"}]}], "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"nocc", ",", "0", ",", 
+       RowBox[{"dimres", "-", "2"}]}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"tmonplus", "=", 
+   RowBox[{"Sum", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"ToExpression", "[", 
+       RowBox[{"StringJoin", "[", 
+        RowBox[{"\"\<g\>\"", ",", 
+         RowBox[{"ToString", "[", 
+          RowBox[{"i", "+", "1"}], "]"}], ",", 
+         RowBox[{"ToString", "[", "i", "]"}]}], "]"}], "]"}], "*", 
+      RowBox[{"nc", "[", 
+       RowBox[{
+        RowBox[{"ket", "[", 
+         RowBox[{
+          RowBox[{"i", "+", "1"}], ",", "Null"}], "]"}], ",", 
+        RowBox[{"bra", "[", 
+         RowBox[{"i", ",", "Null"}], "]"}]}], "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "0", ",", 
+       RowBox[{"dimtmon", "-", "2"}]}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"H0", "=", 
+   RowBox[{"Sum", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"Evalsq", "[", 
+         RowBox[{"[", 
+          RowBox[{"i", "+", "1"}], "]"}], "]"}], "+", 
+        RowBox[{"j", " ", "Er"}]}], ")"}], "*", 
+      RowBox[{"Pij", "[", 
+       RowBox[{"i", ",", "j"}], "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "0", ",", 
+       RowBox[{"dimtmon", "-", "1"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"j", ",", "0", ",", 
+       RowBox[{"dimres", "-", "1"}]}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Vop", "=", 
+   RowBox[{
+    RowBox[{"nc", "[", 
+     RowBox[{"tmonplus", ",", "aop"}], "]"}], "+", 
+    RowBox[{"conj", "[", 
+     RowBox[{"nc", "[", 
+      RowBox[{"tmonplus", ",", "aop"}], "]"}], "]"}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.855490822387115*^9, 3.8554908630846653`*^9}, {
+   3.855491026712777*^9, 3.85549103083257*^9}, {3.855493507364657*^9, 
+   3.855493524369676*^9}, {3.855493667694674*^9, 3.8554936824597883`*^9}, {
+   3.8555048957719927`*^9, 3.8555049008427277`*^9}, {3.855505014932653*^9, 
+   3.8555050233698683`*^9}, {3.8555052986763897`*^9, 3.855505313813697*^9}, 
+   3.8555053539090233`*^9, {3.855507255952264*^9, 3.85550726343506*^9}, {
+   3.855507328992567*^9, 3.855507354200239*^9}, {3.8555073854561253`*^9, 
+   3.855507385821435*^9}, {3.855510286495466*^9, 3.855510287820655*^9}, {
+   3.855512654179991*^9, 3.8555127043660393`*^9}, {3.8555141712587748`*^9, 
+   3.855514328102666*^9}, {3.8555143652471457`*^9, 3.855514472893938*^9}, {
+   3.855514524357657*^9, 3.8555145501237793`*^9}, {3.855655605818379*^9, 
+   3.855655645042905*^9}, {3.8556560431005907`*^9, 3.855656092963996*^9}, 
+   3.855656189996829*^9, {3.86568084126762*^9, 3.865680867225893*^9}, {
+   3.865680913521954*^9, 3.8656809154101143`*^9}, {3.865681260194352*^9, 
+   3.8656812639561357`*^9}, {3.8656814133246593`*^9, 3.865681435044324*^9}, 
+   3.865696124746768*^9, {3.865699958528502*^9, 3.865699989869783*^9}, {
+   3.865766567854463*^9, 3.865766594097246*^9}, {3.8657666457089252`*^9, 
+   3.8657667162868137`*^9}, {3.865766786027947*^9, 3.865766860614403*^9}, {
+   3.8657669438882437`*^9, 3.865767039758127*^9}, {3.865767075099765*^9, 
+   3.865767096458789*^9}, {3.865767577155931*^9, 3.8657675815340137`*^9}, {
+   3.865768074804653*^9, 3.8657680759045677`*^9}, {3.865789242745846*^9, 
+   3.8657892444526443`*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"528d7ffc-6558-46c5-aee7-26d1c3e1702e"],
+
+Cell[TextData[StyleBox["Define subspaces",
+ FontSize->24]], "Text",
+ CellChangeTimes->{{3.855656298620165*^9, 3.855656304420127*^9}, {
+  3.8656816352132597`*^9, 
+  3.865681637740252*^9}},ExpressionUUID->"f97b144b-c332-46ae-ad30-\
+601a7526b273"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"PList", "=", 
+   RowBox[{"{", 
+    RowBox[{"ket", "[", 
+     RowBox[{"1", ",", "2"}], "]"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"QSum", "=", 
+   RowBox[{
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"ket", "[", 
+       RowBox[{"i", ",", "nocc"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "0", ",", "dimtmon"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"nocc", ",", "0", ",", "dimres"}], "}"}]}], "]"}], "-", 
+    RowBox[{"PList", "[", 
+     RowBox[{"[", "1", "]"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"QList", "=", 
+   RowBox[{"List", "@@", " ", "QSum"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"EffHam2", "=", 
+   RowBox[{"ComputeEffectiveHamiltonian", "[", 
+    RowBox[{"2", ",", "H0", ",", "Vop", ",", "PList", ",", "QList"}], "]"}]}],
+   ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Collect", "[", 
+  RowBox[{"EffHam2", ",", 
+   RowBox[{"{", 
+    RowBox[{
+     SuperscriptBox["g10", "2"], ",", 
+     SuperscriptBox["g21", "2"]}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.8555146305930643`*^9, 3.855514660251152*^9}, {
+   3.855514711794157*^9, 3.8555147386804323`*^9}, {3.855514895367814*^9, 
+   3.85551493012948*^9}, {3.855515204378023*^9, 3.8555152046180677`*^9}, {
+   3.855601757321272*^9, 3.855601777718107*^9}, {3.855602442791441*^9, 
+   3.855602599977036*^9}, {3.8556070204115133`*^9, 3.855607029206319*^9}, {
+   3.8556562742687387`*^9, 3.855656275268005*^9}, {3.855656314228705*^9, 
+   3.855656333324552*^9}, {3.855659506595726*^9, 3.855659515665629*^9}, {
+   3.855659875011072*^9, 3.855659875232633*^9}, {3.8556604670940866`*^9, 
+   3.855660467339066*^9}, {3.8657849722217627`*^9, 3.8657849725535183`*^9}, {
+   3.8657982849768543`*^9, 3.8657982864929323`*^9}, 3.8660176638848047`*^9, {
+   3.866017700001999*^9, 3.8660178067193403`*^9}, {3.866017876174973*^9, 
+   3.866017949860977*^9}, {3.866018096430863*^9, 3.8660181808394403`*^9}, {
+   3.867264802675519*^9, 3.867264815127334*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"9462b0d8-d766-4857-b34f-36a04d1adb92"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   FractionBox["1", "2"], " ", 
+   SuperscriptBox["g10", "2"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"3", " ", 
+        RowBox[{
+         TagBox[
+          RowBox[{
+           TagBox[
+            StyleBox["\<\"\[LeftBracketingBar]\"\>",
+             FontColor->RGBColor[1, 0.5, 0]],
+            StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+           RowBox[{"1", "2"}], 
+           TagBox[
+            StyleBox["\<\"\[RightAngleBracket]\"\>",
+             FontColor->RGBColor[1, 0.5, 0]],
+            StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+          DisplayForm], 
+         StyleBox["\[CenterDot]",
+          FontColor->RGBColor[0, 1, 0]], 
+         TagBox[
+          RowBox[{
+           TagBox[
+            StyleBox["\<\"\[LeftAngleBracket]\"\>",
+             FontColor->RGBColor[1, 0.5, 0]],
+            StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+           RowBox[{"1", "2"}], 
+           TagBox[
+            StyleBox["\<\"\[RightBracketingBar]\"\>",
+             FontColor->RGBColor[1, 0.5, 0]],
+            StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+          DisplayForm]}]}], 
+       RowBox[{"Er", "+", 
+        SubscriptBox["Eq", "0"], "-", 
+        SubscriptBox["Eq", "1"]}]]}], "+", 
+     FractionBox[
+      RowBox[{"3", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{
+       RowBox[{"-", "Er"}], "-", 
+       SubscriptBox["Eq", "0"], "+", 
+       SubscriptBox["Eq", "1"]}]]}], ")"}]}], "+", 
+  RowBox[{
+   FractionBox["1", "2"], " ", 
+   SuperscriptBox["g21", "2"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"2", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"Er", "+", 
+       SubscriptBox["Eq", "1"], "-", 
+       SubscriptBox["Eq", "2"]}]], "-", 
+     FractionBox[
+      RowBox[{"2", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{
+       RowBox[{"-", "Er"}], "-", 
+       SubscriptBox["Eq", "1"], "+", 
+       SubscriptBox["Eq", "2"]}]]}], ")"}]}]}]], "Output",
+ CellChangeTimes->{
+  3.865784977077401*^9, 3.8657892535919123`*^9, 3.86579833238979*^9, {
+   3.866017682391535*^9, 3.866017766451412*^9}, 3.866017808834639*^9, {
+   3.866017907707281*^9, 3.8660179315495853`*^9}, 3.8660179635114*^9, 
+   3.866018109096327*^9, 3.86601814100908*^9, 3.866018183008294*^9, {
+   3.867264798030848*^9, 3.8672648178662663`*^9}, 3.867264934991832*^9, 
+   3.8672690223405933`*^9},
+ CellLabel->"Out[19]=",ExpressionUUID->"1b42aebf-08bd-4241-a1aa-70b393e2d90a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"EffHam4", "=", 
+   RowBox[{"ComputeEffectiveHamiltonian", "[", 
+    RowBox[{"4", ",", "H0", ",", "Vop", ",", "PList", ",", "QList"}], "]"}]}],
+   ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Simplify", "[", 
+  RowBox[{"Collect", "[", 
+   RowBox[{"EffHam4", ",", 
+    RowBox[{"{", " ", 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["g21", "2"], " ", 
+       SuperscriptBox["g32", "2"]}], ",", 
+      SuperscriptBox["g10", "4"], ",", 
+      SuperscriptBox["g21", "4"], ",", 
+      RowBox[{
+       SuperscriptBox["g10", "2"], " ", 
+       SuperscriptBox["g21", "2"]}]}], "}"}]}], "]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.865682744694914*^9, 3.865682771504189*^9}, {
+  3.865696322013487*^9, 3.865696325230094*^9}, {3.865696356623849*^9, 
+  3.865696359230688*^9}, {3.8656964547418737`*^9, 3.865696457515423*^9}, {
+  3.865768090025475*^9, 3.8657681001949577`*^9}},
+ CellLabel->"In[20]:=",ExpressionUUID->"e9c2250d-5efe-4c0a-b7e4-1286d25fe84f"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   TagBox[
+    RowBox[{
+     TagBox[
+      StyleBox["\<\"\[LeftBracketingBar]\"\>",
+       FontColor->RGBColor[1, 0.5, 0]],
+      StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+     RowBox[{"1", "2"}], 
+     TagBox[
+      StyleBox["\<\"\[RightAngleBracket]\"\>",
+       FontColor->RGBColor[1, 0.5, 0]],
+      StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+    DisplayForm], 
+   StyleBox["\[CenterDot]",
+    FontColor->RGBColor[0, 1, 0]], 
+   TagBox[
+    RowBox[{
+     TagBox[
+      StyleBox["\<\"\[LeftAngleBracket]\"\>",
+       FontColor->RGBColor[1, 0.5, 0]],
+      StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+     RowBox[{"1", "2"}], 
+     TagBox[
+      StyleBox["\<\"\[RightBracketingBar]\"\>",
+       FontColor->RGBColor[1, 0.5, 0]],
+      StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+    DisplayForm]}], " ", 
+  RowBox[{"(", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"9", " ", 
+      SuperscriptBox["g10", "4"]}], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"Er", "+", 
+        SubscriptBox["Eq", "0"], "-", 
+        SubscriptBox["Eq", "1"]}], ")"}], "3"]], "+", 
+    FractionBox[
+     RowBox[{"6", " ", 
+      SuperscriptBox["g10", "2"], " ", 
+      SuperscriptBox["g21", "2"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox["Eq", "0"], "-", 
+        RowBox[{"2", " ", 
+         SubscriptBox["Eq", "1"]}], "+", 
+        SubscriptBox["Eq", "2"]}], ")"}]}], 
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"Er", "+", 
+         SubscriptBox["Eq", "0"], "-", 
+         SubscriptBox["Eq", "1"]}], ")"}], "2"], " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"Er", "+", 
+         SubscriptBox["Eq", "1"], "-", 
+         SubscriptBox["Eq", "2"]}], ")"}], "2"]}]], "+", 
+    FractionBox[
+     RowBox[{"2", " ", 
+      SuperscriptBox["g21", "2"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "2"}], " ", 
+         SuperscriptBox["g21", "2"]}], "+", 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["g32", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{"Er", "+", 
+            SubscriptBox["Eq", "1"], "-", 
+            SubscriptBox["Eq", "2"]}], ")"}]}], 
+         RowBox[{
+          RowBox[{"2", " ", "Er"}], "+", 
+          SubscriptBox["Eq", "1"], "-", 
+          SubscriptBox["Eq", "3"]}]]}], ")"}]}], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"Er", "+", 
+        SubscriptBox["Eq", "1"], "-", 
+        SubscriptBox["Eq", "2"]}], ")"}], "3"]]}], ")"}]}]], "Output",
+ CellChangeTimes->{
+  3.865682776549349*^9, 3.8656961928125257`*^9, 3.865696332309795*^9, 
+   3.865696364298805*^9, 3.865696462667137*^9, 3.865768024587068*^9, {
+   3.86576809974105*^9, 3.865768104491496*^9}, 3.8657892763077307`*^9, 
+   3.867264845216978*^9, 3.867264951356044*^9, 3.8672690392868547`*^9},
+ CellLabel->"Out[21]=",ExpressionUUID->"15ba7e27-c4af-4c57-ab70-8fc3e52762b4"]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"EffHam6", "=", 
+   RowBox[{"ComputeEffectiveHamiltonian", "[", 
+    RowBox[{"6", ",", "H0", ",", "Vop", ",", "PList", ",", "QList"}], "]"}]}],
+   ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Simplify", "[", 
+  RowBox[{"Collect", "[", 
+   RowBox[{"EffHam6", ",", 
+    RowBox[{"{", " ", 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["g21", "3"], " ", 
+       SuperscriptBox["g32", "3"]}], ",", 
+      RowBox[{
+       SuperscriptBox["g21", "2"], " ", 
+       SuperscriptBox["g32", "2"], 
+       SuperscriptBox["g10", "2"]}], ",", 
+      SuperscriptBox["g10", "6"], ",", 
+      SuperscriptBox["g21", "6"], ",", 
+      RowBox[{
+       SuperscriptBox["g10", "2"], " ", 
+       SuperscriptBox["g21", "4"]}], ",", 
+      RowBox[{
+       SuperscriptBox["g32", "2"], " ", 
+       SuperscriptBox["g21", "4"]}], ",", 
+      RowBox[{
+       SuperscriptBox["g10", "4"], " ", 
+       SuperscriptBox["g21", "2"]}]}], "}"}]}], "]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.865789201351609*^9, 3.865789227763253*^9}, {
+  3.865789518386299*^9, 3.8657895211056433`*^9}, {3.865792764617713*^9, 
+  3.865792764887754*^9}},
+ CellLabel->"In[22]:=",ExpressionUUID->"4cb94191-f521-4e83-9b78-e1c6969589a5"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.865789527679276*^9, 3.8657895955622473`*^9}, 
+   3.8657927630804453`*^9},ExpressionUUID->"43f679e1-df92-4d22-b30d-\
+f840e78ffb64"],
+
+Cell[BoxData[
+ RowBox[{"2", " ", 
+  RowBox[{
+   TagBox[
+    RowBox[{
+     TagBox[
+      StyleBox["\<\"\[LeftBracketingBar]\"\>",
+       FontColor->RGBColor[1, 0.5, 0]],
+      StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+     RowBox[{"1", "2"}], 
+     TagBox[
+      StyleBox["\<\"\[RightAngleBracket]\"\>",
+       FontColor->RGBColor[1, 0.5, 0]],
+      StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+    DisplayForm], 
+   StyleBox["\[CenterDot]",
+    FontColor->RGBColor[0, 1, 0]], 
+   TagBox[
+    RowBox[{
+     TagBox[
+      StyleBox["\<\"\[LeftAngleBracket]\"\>",
+       FontColor->RGBColor[1, 0.5, 0]],
+      StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+     RowBox[{"1", "2"}], 
+     TagBox[
+      StyleBox["\<\"\[RightBracketingBar]\"\>",
+       FontColor->RGBColor[1, 0.5, 0]],
+      StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+    DisplayForm]}], " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox[
+      RowBox[{"27", " ", 
+       SuperscriptBox["g10", "6"]}], 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"Er", "+", 
+         SubscriptBox["Eq", "0"], "-", 
+         SubscriptBox["Eq", "1"]}], ")"}], "5"]]}], "+", 
+    FractionBox[
+     RowBox[{"9", " ", 
+      SuperscriptBox["g10", "4"], " ", 
+      SuperscriptBox["g21", "2"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", " ", 
+         SuperscriptBox["Er", "2"]}], "+", 
+        SubsuperscriptBox["Eq", "0", "2"], "+", 
+        RowBox[{"6", " ", 
+         SubsuperscriptBox["Eq", "1", "2"]}], "+", 
+        RowBox[{"4", " ", "Er", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox["Eq", "1"], "-", 
+           SubscriptBox["Eq", "2"]}], ")"}]}], "-", 
+        RowBox[{"8", " ", 
+         SubscriptBox["Eq", "1"], " ", 
+         SubscriptBox["Eq", "2"]}], "+", 
+        RowBox[{"3", " ", 
+         SubsuperscriptBox["Eq", "2", "2"]}], "+", 
+        RowBox[{
+         SubscriptBox["Eq", "0"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "4"}], " ", 
+            SubscriptBox["Eq", "1"]}], "+", 
+           RowBox[{"2", " ", 
+            SubscriptBox["Eq", "2"]}]}], ")"}]}]}], ")"}]}], 
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"Er", "+", 
+         SubscriptBox["Eq", "0"], "-", 
+         SubscriptBox["Eq", "1"]}], ")"}], "4"], " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"Er", "+", 
+         SubscriptBox["Eq", "1"], "-", 
+         SubscriptBox["Eq", "2"]}], ")"}], "3"]}]], "+", 
+    RowBox[{
+     FractionBox["1", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"Er", "+", 
+          SubscriptBox["Eq", "0"], "-", 
+          SubscriptBox["Eq", "1"]}], ")"}], "3"], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"Er", "+", 
+          SubscriptBox["Eq", "1"], "-", 
+          SubscriptBox["Eq", "2"]}], ")"}], "4"]}]], 
+     RowBox[{"3", " ", 
+      SuperscriptBox["g10", "2"], " ", 
+      SuperscriptBox["g21", "2"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "6"}], " ", 
+         SuperscriptBox["g21", "2"], " ", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"Er", "+", 
+            SubscriptBox["Eq", "0"], "-", 
+            SubscriptBox["Eq", "1"]}], ")"}], "2"]}], "+", 
+        RowBox[{"4", " ", 
+         SuperscriptBox["g21", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{"Er", "+", 
+           SubscriptBox["Eq", "0"], "-", 
+           SubscriptBox["Eq", "1"]}], ")"}], " ", 
+         RowBox[{"(", 
+          RowBox[{"Er", "+", 
+           SubscriptBox["Eq", "1"], "-", 
+           SubscriptBox["Eq", "2"]}], ")"}]}], "-", 
+        RowBox[{"2", " ", 
+         SuperscriptBox["g21", "2"], " ", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"Er", "+", 
+            SubscriptBox["Eq", "1"], "-", 
+            SubscriptBox["Eq", "2"]}], ")"}], "2"]}], "+", 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["g32", "2"], " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"Er", "+", 
+             SubscriptBox["Eq", "0"], "-", 
+             SubscriptBox["Eq", "1"]}], ")"}], "2"], " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"Er", "+", 
+             SubscriptBox["Eq", "1"], "-", 
+             SubscriptBox["Eq", "2"]}], ")"}], "2"]}], 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"2", " ", "Er"}], "+", 
+            SubscriptBox["Eq", "1"], "-", 
+            SubscriptBox["Eq", "3"]}], ")"}], "2"]], "+", 
+        FractionBox[
+         RowBox[{"2", " ", 
+          SuperscriptBox["g32", "2"], " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"Er", "+", 
+             SubscriptBox["Eq", "0"], "-", 
+             SubscriptBox["Eq", "1"]}], ")"}], "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{"Er", "+", 
+            SubscriptBox["Eq", "1"], "-", 
+            SubscriptBox["Eq", "2"]}], ")"}]}], 
+         RowBox[{
+          RowBox[{"2", " ", "Er"}], "+", 
+          SubscriptBox["Eq", "1"], "-", 
+          SubscriptBox["Eq", "3"]}]], "-", 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["g32", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{"Er", "+", 
+            SubscriptBox["Eq", "0"], "-", 
+            SubscriptBox["Eq", "1"]}], ")"}], " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"Er", "+", 
+             SubscriptBox["Eq", "1"], "-", 
+             SubscriptBox["Eq", "2"]}], ")"}], "2"]}], 
+         RowBox[{
+          RowBox[{"2", " ", "Er"}], "+", 
+          SubscriptBox["Eq", "1"], "-", 
+          SubscriptBox["Eq", "3"]}]]}], ")"}]}]}], "+", 
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["g21", "2"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "2"}], " ", 
+         SuperscriptBox["g21", "2"], " ", 
+         SuperscriptBox["g32", "2"], " ", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"Er", "+", 
+            SubscriptBox["Eq", "1"], "-", 
+            SubscriptBox["Eq", "2"]}], ")"}], "2"]}], "+", 
+        RowBox[{
+         SuperscriptBox["g32", "4"], " ", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"Er", "+", 
+            SubscriptBox["Eq", "1"], "-", 
+            SubscriptBox["Eq", "2"]}], ")"}], "2"]}], "-", 
+        RowBox[{"6", " ", 
+         SuperscriptBox["g21", "2"], " ", 
+         SuperscriptBox["g32", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{"Er", "+", 
+           SubscriptBox["Eq", "1"], "-", 
+           SubscriptBox["Eq", "2"]}], ")"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"2", " ", "Er"}], "+", 
+           SubscriptBox["Eq", "1"], "-", 
+           SubscriptBox["Eq", "3"]}], ")"}]}], "+", 
+        RowBox[{"8", " ", 
+         SuperscriptBox["g21", "4"], " ", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"2", " ", "Er"}], "+", 
+            SubscriptBox["Eq", "1"], "-", 
+            SubscriptBox["Eq", "3"]}], ")"}], "2"]}]}], ")"}]}], 
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"Er", "+", 
+         SubscriptBox["Eq", "1"], "-", 
+         SubscriptBox["Eq", "2"]}], ")"}], "5"], " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"2", " ", "Er"}], "+", 
+         SubscriptBox["Eq", "1"], "-", 
+         SubscriptBox["Eq", "3"]}], ")"}], "2"]}]]}], ")"}]}]], "Output",
+ CellChangeTimes->{3.8657894837820873`*^9, 3.86578960737322*^9},
+ CellLabel->
+  "Out[115]=",ExpressionUUID->"561f6dfd-1be3-4044-a8ab-a7f6576fc887"]
+}, Open  ]],
+
+Cell[TextData[StyleBox["Test: two qubits + resonator",
+ FontSize->36]], "Text",
+ CellChangeTimes->{{3.855661851749672*^9, 3.855661858813965*^9}, {
+  3.865682996807104*^9, 3.86568299839117*^9}, {3.867269047444532*^9, 
+  3.867269048216957*^9}},ExpressionUUID->"1ab4c72e-f878-44c9-b2ae-\
+907aa6e0dcdc"],
+
+Cell[TextData[StyleBox["Define Hamiltonian",
+ FontSize->24]], "Text",
+ CellChangeTimes->{{3.855507303349601*^9, 
+  3.855507307193533*^9}},ExpressionUUID->"1c075109-06f4-44d5-b02d-\
+db5030bc7fd9"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Pij", "[", 
+   RowBox[{"i_", ",", "j_", ",", "k_"}], "]"}], ":=", 
+  RowBox[{"nc", "[", 
+   RowBox[{
+    RowBox[{"ket", "[", 
+     RowBox[{"i", ",", "j", ",", "k"}], "]"}], ",", 
+    RowBox[{"bra", "[", 
+     RowBox[{"i", ",", "j", ",", "k"}], "]"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dimres", "=", "5"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"snegrealconstants", "[", 
+   RowBox[{"Eq1", ",", "Eq2", ",", "Eres", ",", "gq1", ",", "gq2"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"H0", "=", 
+   RowBox[{"Sum", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         FractionBox[
+          RowBox[{"-", "Eq1"}], "2"], " ", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"-", "1"}], ")"}], "i"]}], "+", 
+        RowBox[{
+         FractionBox[
+          RowBox[{"-", "Eq2"}], "2"], " ", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"-", "1"}], ")"}], "j"]}], "+", 
+        RowBox[{"k", " ", "Eres"}]}], ")"}], 
+      RowBox[{"Pij", "[", 
+       RowBox[{"i", ",", "j", ",", "k"}], "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "0", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"j", ",", "0", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", "0", ",", 
+       RowBox[{"dimres", "-", "1"}]}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"aop", "=", 
+   RowBox[{"Sum", "[", 
+    RowBox[{
+     RowBox[{
+      SqrtBox[
+       RowBox[{"nocc", "+", "1"}]], 
+      RowBox[{"nc", "[", 
+       RowBox[{
+        RowBox[{"ket", "[", 
+         RowBox[{"Null", ",", "Null", ",", "nocc"}], "]"}], ",", 
+        RowBox[{"bra", "[", 
+         RowBox[{"Null", ",", "Null", ",", 
+          RowBox[{"nocc", "+", "1"}]}], "]"}]}], "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"nocc", ",", "0", ",", 
+       RowBox[{"dimres", "-", "2"}]}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"q1plus", "=", 
+   RowBox[{"gq1", " ", 
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"nc", "[", 
+       RowBox[{
+        RowBox[{"ket", "[", 
+         RowBox[{"1", ",", "j", ",", "Null"}], "]"}], ",", 
+        RowBox[{"bra", "[", 
+         RowBox[{"0", ",", "j", ",", "Null"}], "]"}]}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", "1"}], "}"}]}], "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"q2plus", "=", 
+   RowBox[{"gq2", " ", 
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"nc", "[", 
+       RowBox[{
+        RowBox[{"ket", "[", 
+         RowBox[{"i", ",", "1", ",", "Null"}], "]"}], ",", 
+        RowBox[{"bra", "[", 
+         RowBox[{"i", ",", "0", ",", "Null"}], "]"}]}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "0", ",", "1"}], "}"}]}], "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Vop", "=", 
+   RowBox[{
+    RowBox[{"nc", "[", 
+     RowBox[{"q1plus", ",", "aop"}], "]"}], "+", 
+    RowBox[{"nc", "[", 
+     RowBox[{"q2plus", ",", "aop"}], "]"}], "+", 
+    RowBox[{"conj", "[", 
+     RowBox[{
+      RowBox[{"nc", "[", 
+       RowBox[{"q1plus", ",", "aop"}], "]"}], "+", 
+      RowBox[{"nc", "[", 
+       RowBox[{"q2plus", ",", "aop"}], "]"}]}], "]"}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.855490822387115*^9, 3.8554908630846653`*^9}, {
+   3.855491026712777*^9, 3.85549103083257*^9}, {3.855493507364657*^9, 
+   3.855493524369676*^9}, {3.855493667694674*^9, 3.8554936824597883`*^9}, {
+   3.8555048957719927`*^9, 3.8555049008427277`*^9}, {3.855505014932653*^9, 
+   3.8555050233698683`*^9}, {3.8555052986763897`*^9, 3.855505313813697*^9}, 
+   3.8555053539090233`*^9, {3.855507255952264*^9, 3.85550726343506*^9}, {
+   3.855507328992567*^9, 3.855507354200239*^9}, {3.8555073854561253`*^9, 
+   3.855507385821435*^9}, {3.855510286495466*^9, 3.855510287820655*^9}, {
+   3.855512654179991*^9, 3.8555127043660393`*^9}, {3.8555141712587748`*^9, 
+   3.855514328102666*^9}, {3.8555143652471457`*^9, 3.855514472893938*^9}, {
+   3.855514524357657*^9, 3.8555145501237793`*^9}, {3.855655605818379*^9, 
+   3.855655645042905*^9}, {3.8556560431005907`*^9, 3.855656092963996*^9}, 
+   3.855656189996829*^9, {3.86568084126762*^9, 3.865680867225893*^9}, {
+   3.865680913521954*^9, 3.8656809154101143`*^9}, {3.865681260194352*^9, 
+   3.8656812639561357`*^9}, {3.8656814133246593`*^9, 3.865681435044324*^9}, {
+   3.865683002927642*^9, 3.8656831705366507`*^9}, {3.8656832020888*^9, 
+   3.8656833750288353`*^9}, {3.865683425688549*^9, 3.865683547522176*^9}, {
+   3.865683740632921*^9, 3.865683740856042*^9}, {3.865687040529159*^9, 
+   3.86568704074433*^9}, {3.865687631013336*^9, 3.8656876367252407`*^9}},
+ CellLabel->"In[22]:=",ExpressionUUID->"7de30fb1-80d7-4713-bb00-e6bca6bb5fb4"],
+
+Cell[TextData[StyleBox["Define subspaces",
+ FontSize->24]], "Text",
+ CellChangeTimes->{{3.855656298620165*^9, 3.855656304420127*^9}, {
+  3.8656816352132597`*^9, 
+  3.865681637740252*^9}},ExpressionUUID->"50519e84-5ad0-4008-8e44-\
+de994e6f8f2a"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"PList", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"ket", "[", 
+      RowBox[{"0", ",", "1", ",", "2"}], "]"}], ",", 
+     RowBox[{"ket", "[", 
+      RowBox[{"1", ",", "0", ",", "2"}], "]"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"QSum", "=", 
+   RowBox[{
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"ket", "[", 
+       RowBox[{"i", ",", "j", ",", "k"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "0", ",", "1"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", "0", ",", "1"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"k", ",", "0", ",", 
+        RowBox[{"dimres", "-", "1"}]}], "}"}]}], "]"}], "-", 
+    RowBox[{"Total", "[", "PList", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"QList", "=", 
+   RowBox[{"List", "@@", " ", "QSum"}]}], ";"}]}], "Input",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQBWIQnfTrUsP5nW8cCzg7WkD0nsyfXSBa6lhoH4hWOvp6
+IYjerOKyDEQfkeg5AaLNjk8G03fcV3H/Aun7ZcYHomuCIxNB9EPn/yUgWk67
+d+4fIK01a9k8EN0002OVyK43jvWTM8B0b6D7ehC9O2nVRhBtIBBsJwakr/qU
+2oPoLVEJOSB6d2E6mD7ElLwNRC+8mQWm373OO2ty9o1j9el950D0h1N7LoHo
+FwIZV0D0DddTDWZAOm/xk2YQ3cUc1AOiS+6vAdMMky1Wg+iga85g+oH18i0g
+2sd3yk4QLVjfexpEF1ycAKajucTfgPmizWA6IOTZDxAtfNzlJ4gGAEEDvLM=
+
+  "],
+ CellLabel->"In[30]:=",ExpressionUUID->"e3028467-6e60-4eca-b4a0-22d9a94aa780"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Collect", "[", 
+  RowBox[{
+   RowBox[{"ComputeEffectiveHamiltonian", "[", 
+    RowBox[{"2", ",", "H0", ",", "Vop", ",", "PList", ",", "QList"}], "]"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     SuperscriptBox["gq1", "2"], ",", 
+     SuperscriptBox["gq2", "2"], ",", 
+     RowBox[{"gq1", " ", "gq2"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8656965561493263`*^9, 3.865696618431933*^9}},
+ CellLabel->"In[33]:=",ExpressionUUID->"c5183995-3838-4a12-b8b6-8db57b38971a"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   FractionBox["1", "2"], " ", "gq1", " ", "gq2", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"0", "1", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm], 
+       StyleBox["\[CenterDot]",
+        FontColor->RGBColor[0, 1, 0]], 
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"1", "0", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm]}], 
+      RowBox[{"Eq2", "-", "Eres"}]], "-", 
+     FractionBox[
+      RowBox[{
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"0", "1", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm], 
+       StyleBox["\[CenterDot]",
+        FontColor->RGBColor[0, 1, 0]], 
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"1", "0", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm]}], 
+      RowBox[{
+       RowBox[{"-", "Eq1"}], "+", "Eres"}]], "+", 
+     FractionBox[
+      RowBox[{
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"1", "0", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm], 
+       StyleBox["\[CenterDot]",
+        FontColor->RGBColor[0, 1, 0]], 
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"0", "1", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm]}], 
+      RowBox[{"Eq1", "-", "Eres"}]], "-", 
+     FractionBox[
+      RowBox[{
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"1", "0", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm], 
+       StyleBox["\[CenterDot]",
+        FontColor->RGBColor[0, 1, 0]], 
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"0", "1", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm]}], 
+      RowBox[{
+       RowBox[{"-", "Eq2"}], "+", "Eres"}]]}], ")"}]}], "+", 
+  RowBox[{
+   FractionBox["1", "2"], " ", 
+   SuperscriptBox["gq1", "2"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"2", " ", 
+        RowBox[{
+         TagBox[
+          RowBox[{
+           TagBox[
+            StyleBox["\<\"\[LeftBracketingBar]\"\>",
+             FontColor->RGBColor[1, 0.5, 0]],
+            StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+           RowBox[{"0", "1", "2"}], 
+           TagBox[
+            StyleBox["\<\"\[RightAngleBracket]\"\>",
+             FontColor->RGBColor[1, 0.5, 0]],
+            StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+          DisplayForm], 
+         StyleBox["\[CenterDot]",
+          FontColor->RGBColor[0, 1, 0]], 
+         TagBox[
+          RowBox[{
+           TagBox[
+            StyleBox["\<\"\[LeftAngleBracket]\"\>",
+             FontColor->RGBColor[1, 0.5, 0]],
+            StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+           RowBox[{"0", "1", "2"}], 
+           TagBox[
+            StyleBox["\<\"\[RightBracketingBar]\"\>",
+             FontColor->RGBColor[1, 0.5, 0]],
+            StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+          DisplayForm]}]}], 
+       RowBox[{"Eq1", "-", "Eres"}]]}], "+", 
+     FractionBox[
+      RowBox[{"2", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{
+       RowBox[{"-", "Eq1"}], "+", "Eres"}]], "+", 
+     FractionBox[
+      RowBox[{"3", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"Eq1", "-", "Eres"}]], "-", 
+     FractionBox[
+      RowBox[{"3", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{
+       RowBox[{"-", "Eq1"}], "+", "Eres"}]]}], ")"}]}], "+", 
+  RowBox[{
+   FractionBox["1", "2"], " ", 
+   SuperscriptBox["gq2", "2"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"3", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"Eq2", "-", "Eres"}]], "-", 
+     FractionBox[
+      RowBox[{"3", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{
+       RowBox[{"-", "Eq2"}], "+", "Eres"}]], "-", 
+     FractionBox[
+      RowBox[{"2", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"Eq2", "-", "Eres"}]], "+", 
+     FractionBox[
+      RowBox[{"2", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{
+       RowBox[{"-", "Eq2"}], "+", "Eres"}]]}], ")"}]}]}]], "Output",
+ CellChangeTimes->{
+  3.865696560384919*^9, {3.865696613032736*^9, 3.865696619937084*^9}, 
+   3.8672649523307457`*^9},
+ CellLabel->"Out[33]=",ExpressionUUID->"18dc9929-7855-41fb-a755-05ef4d72bfd2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Collect", "[", 
+  RowBox[{
+   RowBox[{"ComputeEffectiveHamiltonian", "[", 
+    RowBox[{"4", ",", "H0", ",", "Vop", ",", "PList", ",", "QList"}], "]"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     SuperscriptBox["gq1", "4"], ",", 
+     SuperscriptBox["gq2", "4"], ",", 
+     RowBox[{
+      SuperscriptBox["gq1", "2"], " ", 
+      SuperscriptBox["gq2", "2"]}], ",", 
+     RowBox[{
+      SuperscriptBox["gq1", "3"], " ", "gq2"}], ",", 
+     RowBox[{"gq1", " ", 
+      SuperscriptBox["gq2", "3"]}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.865695136391609*^9, 3.8656951366148777`*^9}, {
+  3.865696636407506*^9, 3.865696637448398*^9}, {3.865696676059478*^9, 
+  3.865696693722124*^9}, {3.865696734491757*^9, 3.865696744018867*^9}},
+ CellLabel->"In[83]:=",ExpressionUUID->"5da92231-4776-4ce5-ae0f-b8573fc2021e"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"gq1", " ", 
+   SuperscriptBox["gq2", "3"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"2", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "Eq1"}], "+", "Eres"}], ")"}], "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq2"}], "+", "Eres"}], ")"}]}]], "+", 
+     FractionBox[
+      RowBox[{"2", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"Eq1", "-", "Eres"}], ")"}], "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{"Eq2", "-", "Eres"}], ")"}]}]]}], ")"}]}], "+", 
+  RowBox[{
+   SuperscriptBox["gq1", "3"], " ", "gq2", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"2", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"Eq1", "-", "Eres"}], ")"}], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"Eq2", "-", "Eres"}], ")"}], "2"]}]], "+", 
+     FractionBox[
+      RowBox[{"2", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq1"}], "+", "Eres"}], ")"}], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "Eq2"}], "+", "Eres"}], ")"}], "2"]}]]}], ")"}]}], "+", 
+  RowBox[{
+   SuperscriptBox["gq1", "3"], " ", "gq2", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"11", " ", 
+        RowBox[{
+         TagBox[
+          RowBox[{
+           TagBox[
+            StyleBox["\<\"\[LeftBracketingBar]\"\>",
+             FontColor->RGBColor[1, 0.5, 0]],
+            StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+           RowBox[{"0", "1", "2"}], 
+           TagBox[
+            StyleBox["\<\"\[RightAngleBracket]\"\>",
+             FontColor->RGBColor[1, 0.5, 0]],
+            StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+          DisplayForm], 
+         StyleBox["\[CenterDot]",
+          FontColor->RGBColor[0, 1, 0]], 
+         TagBox[
+          RowBox[{
+           TagBox[
+            StyleBox["\<\"\[LeftAngleBracket]\"\>",
+             FontColor->RGBColor[1, 0.5, 0]],
+            StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+           RowBox[{"1", "0", "2"}], 
+           TagBox[
+            StyleBox["\<\"\[RightBracketingBar]\"\>",
+             FontColor->RGBColor[1, 0.5, 0]],
+            StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+          DisplayForm]}]}], 
+       RowBox[{"3", " ", 
+        RowBox[{"(", 
+         RowBox[{"Eq1", "-", "Eres"}], ")"}], " ", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"Eq2", "-", "Eres"}], ")"}], "2"]}]]}], "+", 
+     FractionBox[
+      RowBox[{"5", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"3", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "Eq1"}], "+", "Eres"}], ")"}], "3"]}]], "-", 
+     FractionBox[
+      RowBox[{"35", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"24", " ", 
+       RowBox[{"(", 
+        RowBox[{"Eq1", "-", "Eres"}], ")"}], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "Eq1"}], "+", "Eres"}], ")"}], "2"]}]], "+", 
+     FractionBox[
+      RowBox[{"5", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"8", " ", 
+       RowBox[{"(", 
+        RowBox[{"Eq2", "-", "Eres"}], ")"}], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "Eq1"}], "+", "Eres"}], ")"}], "2"]}]], "+", 
+     FractionBox[
+      RowBox[{"5", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"6", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"Eq2", "-", "Eres"}], ")"}], "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq1"}], "+", "Eres"}], ")"}]}]], "-", 
+     FractionBox[
+      RowBox[{"5", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"3", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"Eq1", "-", "Eres"}], ")"}], "3"]}]], "+", 
+     FractionBox[
+      RowBox[{"35", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"24", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"Eq1", "-", "Eres"}], ")"}], "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq1"}], "+", "Eres"}], ")"}]}]], "-", 
+     FractionBox[
+      RowBox[{"5", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"6", " ", 
+       RowBox[{"(", 
+        RowBox[{"Eq1", "-", "Eres"}], ")"}], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "Eq2"}], "+", "Eres"}], ")"}], "2"]}]], "-", 
+     FractionBox[
+      RowBox[{
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"1", "0", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm], 
+       StyleBox["\[CenterDot]",
+        FontColor->RGBColor[0, 1, 0]], 
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"0", "1", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm]}], 
+      RowBox[{"3", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq1"}], "+", "Eres"}], ")"}], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "Eq2"}], "+", "Eres"}], ")"}], "2"]}]], "-", 
+     FractionBox[
+      RowBox[{"5", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"8", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"Eq1", "-", "Eres"}], ")"}], "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq2"}], "+", "Eres"}], ")"}]}]]}], ")"}]}], "+", 
+  RowBox[{"gq1", " ", 
+   SuperscriptBox["gq2", "3"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"5", " ", 
+        RowBox[{
+         TagBox[
+          RowBox[{
+           TagBox[
+            StyleBox["\<\"\[LeftBracketingBar]\"\>",
+             FontColor->RGBColor[1, 0.5, 0]],
+            StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+           RowBox[{"0", "1", "2"}], 
+           TagBox[
+            StyleBox["\<\"\[RightAngleBracket]\"\>",
+             FontColor->RGBColor[1, 0.5, 0]],
+            StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+          DisplayForm], 
+         StyleBox["\[CenterDot]",
+          FontColor->RGBColor[0, 1, 0]], 
+         TagBox[
+          RowBox[{
+           TagBox[
+            StyleBox["\<\"\[LeftAngleBracket]\"\>",
+             FontColor->RGBColor[1, 0.5, 0]],
+            StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+           RowBox[{"1", "0", "2"}], 
+           TagBox[
+            StyleBox["\<\"\[RightBracketingBar]\"\>",
+             FontColor->RGBColor[1, 0.5, 0]],
+            StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+          DisplayForm]}]}], 
+       RowBox[{"3", " ", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"Eq2", "-", "Eres"}], ")"}], "3"]}]]}], "-", 
+     FractionBox[
+      RowBox[{"5", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"6", " ", 
+       RowBox[{"(", 
+        RowBox[{"Eq2", "-", "Eres"}], ")"}], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "Eq1"}], "+", "Eres"}], ")"}], "2"]}]], "-", 
+     FractionBox[
+      RowBox[{"5", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"8", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"Eq2", "-", "Eres"}], ")"}], "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq1"}], "+", "Eres"}], ")"}]}]], "+", 
+     FractionBox[
+      RowBox[{"35", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"24", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"Eq2", "-", "Eres"}], ")"}], "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq2"}], "+", "Eres"}], ")"}]}]], "-", 
+     FractionBox[
+      RowBox[{
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"0", "1", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm], 
+       StyleBox["\[CenterDot]",
+        FontColor->RGBColor[0, 1, 0]], 
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"1", "0", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm]}], 
+      RowBox[{"3", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "Eq1"}], "+", "Eres"}], ")"}], "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq2"}], "+", "Eres"}], ")"}]}]], "-", 
+     FractionBox[
+      RowBox[{"11", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"3", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"Eq1", "-", "Eres"}], ")"}], "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{"Eq2", "-", "Eres"}], ")"}]}]], "+", 
+     FractionBox[
+      RowBox[{"5", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"3", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "Eq2"}], "+", "Eres"}], ")"}], "3"]}]], "+", 
+     FractionBox[
+      RowBox[{"5", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"8", " ", 
+       RowBox[{"(", 
+        RowBox[{"Eq1", "-", "Eres"}], ")"}], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "Eq2"}], "+", "Eres"}], ")"}], "2"]}]], "-", 
+     FractionBox[
+      RowBox[{"35", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"24", " ", 
+       RowBox[{"(", 
+        RowBox[{"Eq2", "-", "Eres"}], ")"}], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "Eq2"}], "+", "Eres"}], ")"}], "2"]}]], "+", 
+     FractionBox[
+      RowBox[{"5", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"6", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"Eq1", "-", "Eres"}], ")"}], "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq2"}], "+", "Eres"}], ")"}]}]]}], ")"}]}], "+", 
+  RowBox[{
+   SuperscriptBox["gq1", "4"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"4", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"3", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"Eq1", "-", "Eres"}], ")"}], "3"]}]], "-", 
+     FractionBox[
+      RowBox[{"4", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"3", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "Eq1"}], "+", "Eres"}], ")"}], "3"]}]], "+", 
+     FractionBox[
+      RowBox[{"2", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"3", " ", 
+       RowBox[{"(", 
+        RowBox[{"Eq1", "-", "Eres"}], ")"}], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "Eq1"}], "+", "Eres"}], ")"}], "2"]}]], "-", 
+     FractionBox[
+      RowBox[{"2", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"3", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"Eq1", "-", "Eres"}], ")"}], "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq1"}], "+", "Eres"}], ")"}]}]], "-", 
+     FractionBox[
+      RowBox[{"3", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"Eq1", "-", "Eres"}], ")"}], "3"]], "+", 
+     FractionBox[
+      RowBox[{"3", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq1"}], "+", "Eres"}], ")"}], "3"]], "-", 
+     FractionBox[
+      RowBox[{"3", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"2", " ", 
+       RowBox[{"(", 
+        RowBox[{"Eq1", "-", "Eres"}], ")"}], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "Eq1"}], "+", "Eres"}], ")"}], "2"]}]], "+", 
+     FractionBox[
+      RowBox[{"3", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"2", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"Eq1", "-", "Eres"}], ")"}], "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq1"}], "+", "Eres"}], ")"}]}]]}], ")"}]}], "+", 
+  RowBox[{
+   SuperscriptBox["gq1", "2"], " ", 
+   SuperscriptBox["gq2", "2"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"2", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"Eq1", "-", "Eres"}], ")"}], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"Eq2", "-", "Eres"}], ")"}], "2"]}]], "+", 
+     FractionBox[
+      RowBox[{"2", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "Eq1"}], "+", "Eres"}], ")"}], "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq2"}], "+", "Eres"}], ")"}]}]], "+", 
+     FractionBox[
+      RowBox[{"2", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"Eq1", "-", "Eres"}], ")"}], "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{"Eq2", "-", "Eres"}], ")"}]}]], "+", 
+     FractionBox[
+      RowBox[{"2", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq1"}], "+", "Eres"}], ")"}], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "Eq2"}], "+", "Eres"}], ")"}], "2"]}]]}], ")"}]}], "+", 
+  RowBox[{
+   SuperscriptBox["gq2", "4"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"3", " ", 
+        RowBox[{
+         TagBox[
+          RowBox[{
+           TagBox[
+            StyleBox["\<\"\[LeftBracketingBar]\"\>",
+             FontColor->RGBColor[1, 0.5, 0]],
+            StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+           RowBox[{"0", "1", "2"}], 
+           TagBox[
+            StyleBox["\<\"\[RightAngleBracket]\"\>",
+             FontColor->RGBColor[1, 0.5, 0]],
+            StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+          DisplayForm], 
+         StyleBox["\[CenterDot]",
+          FontColor->RGBColor[0, 1, 0]], 
+         TagBox[
+          RowBox[{
+           TagBox[
+            StyleBox["\<\"\[LeftAngleBracket]\"\>",
+             FontColor->RGBColor[1, 0.5, 0]],
+            StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+           RowBox[{"0", "1", "2"}], 
+           TagBox[
+            StyleBox["\<\"\[RightBracketingBar]\"\>",
+             FontColor->RGBColor[1, 0.5, 0]],
+            StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+          DisplayForm]}]}], 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"Eq2", "-", "Eres"}], ")"}], "3"]]}], "+", 
+     FractionBox[
+      RowBox[{"3", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq2"}], "+", "Eres"}], ")"}], "3"]], "-", 
+     FractionBox[
+      RowBox[{"3", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"2", " ", 
+       RowBox[{"(", 
+        RowBox[{"Eq2", "-", "Eres"}], ")"}], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "Eq2"}], "+", "Eres"}], ")"}], "2"]}]], "+", 
+     FractionBox[
+      RowBox[{"3", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"2", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"Eq2", "-", "Eres"}], ")"}], "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq2"}], "+", "Eres"}], ")"}]}]], "+", 
+     FractionBox[
+      RowBox[{"4", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"3", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"Eq2", "-", "Eres"}], ")"}], "3"]}]], "-", 
+     FractionBox[
+      RowBox[{"4", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"3", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "Eq2"}], "+", "Eres"}], ")"}], "3"]}]], "+", 
+     FractionBox[
+      RowBox[{"2", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"3", " ", 
+       RowBox[{"(", 
+        RowBox[{"Eq2", "-", "Eres"}], ")"}], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "Eq2"}], "+", "Eres"}], ")"}], "2"]}]], "-", 
+     FractionBox[
+      RowBox[{"2", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"3", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"Eq2", "-", "Eres"}], ")"}], "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq2"}], "+", "Eres"}], ")"}]}]]}], ")"}]}], "+", 
+  RowBox[{
+   SuperscriptBox["gq1", "2"], " ", 
+   SuperscriptBox["gq2", "2"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"3", " ", 
+        RowBox[{
+         TagBox[
+          RowBox[{
+           TagBox[
+            StyleBox["\<\"\[LeftBracketingBar]\"\>",
+             FontColor->RGBColor[1, 0.5, 0]],
+            StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+           RowBox[{"0", "1", "2"}], 
+           TagBox[
+            StyleBox["\<\"\[RightAngleBracket]\"\>",
+             FontColor->RGBColor[1, 0.5, 0]],
+            StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+          DisplayForm], 
+         StyleBox["\[CenterDot]",
+          FontColor->RGBColor[0, 1, 0]], 
+         TagBox[
+          RowBox[{
+           TagBox[
+            StyleBox["\<\"\[LeftAngleBracket]\"\>",
+             FontColor->RGBColor[1, 0.5, 0]],
+            StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+           RowBox[{"0", "1", "2"}], 
+           TagBox[
+            StyleBox["\<\"\[RightBracketingBar]\"\>",
+             FontColor->RGBColor[1, 0.5, 0]],
+            StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+          DisplayForm]}]}], 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"Eq1", "-", "Eres"}], ")"}], " ", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"Eq2", "-", "Eres"}], ")"}], "2"]}]]}], "-", 
+     FractionBox[
+      RowBox[{"2", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"3", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"Eq1", "-", "Eres"}], ")"}], "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{"Eq2", "-", "Eres"}], ")"}]}]], "-", 
+     FractionBox[
+      RowBox[{
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"0", "1", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm], 
+       StyleBox["\[CenterDot]",
+        FontColor->RGBColor[0, 1, 0]], 
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"0", "1", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm]}], 
+      RowBox[{"3", " ", 
+       RowBox[{"(", 
+        RowBox[{"Eq2", "-", "Eres"}], ")"}], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "Eq1"}], "+", "Eres"}], ")"}], "2"]}]], "+", 
+     FractionBox[
+      RowBox[{
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"0", "1", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm], 
+       StyleBox["\[CenterDot]",
+        FontColor->RGBColor[0, 1, 0]], 
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"0", "1", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm]}], 
+      RowBox[{"2", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"Eq2", "-", "Eres"}], ")"}], "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq1"}], "+", "Eres"}], ")"}]}]], "+", 
+     FractionBox[
+      RowBox[{
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"0", "1", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm], 
+       StyleBox["\[CenterDot]",
+        FontColor->RGBColor[0, 1, 0]], 
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"0", "1", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm]}], 
+      RowBox[{"8", " ", 
+       RowBox[{"(", 
+        RowBox[{"Eq1", "-", "Eres"}], ")"}], " ", 
+       RowBox[{"(", 
+        RowBox[{"Eq2", "-", "Eres"}], ")"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq1"}], "+", "Eres"}], ")"}]}]], "-", 
+     FractionBox[
+      RowBox[{
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"0", "1", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm], 
+       StyleBox["\[CenterDot]",
+        FontColor->RGBColor[0, 1, 0]], 
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"0", "1", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm]}], 
+      RowBox[{"2", " ", 
+       RowBox[{"(", 
+        RowBox[{"Eq1", "-", "Eres"}], ")"}], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "Eq2"}], "+", "Eres"}], ")"}], "2"]}]], "+", 
+     FractionBox[
+      RowBox[{
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"0", "1", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm], 
+       StyleBox["\[CenterDot]",
+        FontColor->RGBColor[0, 1, 0]], 
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"0", "1", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm]}], 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq1"}], "+", "Eres"}], ")"}], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "Eq2"}], "+", "Eres"}], ")"}], "2"]}]], "+", 
+     FractionBox[
+      RowBox[{
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"0", "1", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm], 
+       StyleBox["\[CenterDot]",
+        FontColor->RGBColor[0, 1, 0]], 
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"0", "1", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm]}], 
+      RowBox[{"3", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"Eq1", "-", "Eres"}], ")"}], "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq2"}], "+", "Eres"}], ")"}]}]], "-", 
+     FractionBox[
+      RowBox[{
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"0", "1", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm], 
+       StyleBox["\[CenterDot]",
+        FontColor->RGBColor[0, 1, 0]], 
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"0", "1", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm]}], 
+      RowBox[{"8", " ", 
+       RowBox[{"(", 
+        RowBox[{"Eq1", "-", "Eres"}], ")"}], " ", 
+       RowBox[{"(", 
+        RowBox[{"Eq2", "-", "Eres"}], ")"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq2"}], "+", "Eres"}], ")"}]}]], "-", 
+     FractionBox[
+      RowBox[{"4", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"0", "1", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"3", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "Eq1"}], "+", "Eres"}], ")"}], "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq2"}], "+", "Eres"}], ")"}]}]], "-", 
+     FractionBox[
+      RowBox[{
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"0", "1", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm], 
+       StyleBox["\[CenterDot]",
+        FontColor->RGBColor[0, 1, 0]], 
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"0", "1", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm]}], 
+      RowBox[{"8", " ", 
+       RowBox[{"(", 
+        RowBox[{"Eq1", "-", "Eres"}], ")"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq1"}], "+", "Eres"}], ")"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq2"}], "+", "Eres"}], ")"}]}]], "+", 
+     FractionBox[
+      RowBox[{
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"0", "1", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm], 
+       StyleBox["\[CenterDot]",
+        FontColor->RGBColor[0, 1, 0]], 
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"0", "1", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm]}], 
+      RowBox[{"8", " ", 
+       RowBox[{"(", 
+        RowBox[{"Eq2", "-", "Eres"}], ")"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq1"}], "+", "Eres"}], ")"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq2"}], "+", "Eres"}], ")"}]}]], "-", 
+     FractionBox[
+      RowBox[{"2", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"3", " ", 
+       RowBox[{"(", 
+        RowBox[{"Eq1", "-", "Eres"}], ")"}], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"Eq2", "-", "Eres"}], ")"}], "2"]}]], "-", 
+     FractionBox[
+      RowBox[{"3", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"Eq1", "-", "Eres"}], ")"}], "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{"Eq2", "-", "Eres"}], ")"}]}]], "-", 
+     FractionBox[
+      RowBox[{
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"1", "0", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm], 
+       StyleBox["\[CenterDot]",
+        FontColor->RGBColor[0, 1, 0]], 
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"1", "0", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm]}], 
+      RowBox[{"2", " ", 
+       RowBox[{"(", 
+        RowBox[{"Eq2", "-", "Eres"}], ")"}], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "Eq1"}], "+", "Eres"}], ")"}], "2"]}]], "+", 
+     FractionBox[
+      RowBox[{
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"1", "0", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm], 
+       StyleBox["\[CenterDot]",
+        FontColor->RGBColor[0, 1, 0]], 
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"1", "0", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm]}], 
+      RowBox[{"3", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"Eq2", "-", "Eres"}], ")"}], "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq1"}], "+", "Eres"}], ")"}]}]], "-", 
+     FractionBox[
+      RowBox[{
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"1", "0", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm], 
+       StyleBox["\[CenterDot]",
+        FontColor->RGBColor[0, 1, 0]], 
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"1", "0", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm]}], 
+      RowBox[{"8", " ", 
+       RowBox[{"(", 
+        RowBox[{"Eq1", "-", "Eres"}], ")"}], " ", 
+       RowBox[{"(", 
+        RowBox[{"Eq2", "-", "Eres"}], ")"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq1"}], "+", "Eres"}], ")"}]}]], "-", 
+     FractionBox[
+      RowBox[{
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"1", "0", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm], 
+       StyleBox["\[CenterDot]",
+        FontColor->RGBColor[0, 1, 0]], 
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"1", "0", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm]}], 
+      RowBox[{"3", " ", 
+       RowBox[{"(", 
+        RowBox[{"Eq1", "-", "Eres"}], ")"}], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "Eq2"}], "+", "Eres"}], ")"}], "2"]}]], "-", 
+     FractionBox[
+      RowBox[{"4", " ", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm], 
+        StyleBox["\[CenterDot]",
+         FontColor->RGBColor[0, 1, 0]], 
+        TagBox[
+         RowBox[{
+          TagBox[
+           StyleBox["\<\"\[LeftAngleBracket]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+          RowBox[{"1", "0", "2"}], 
+          TagBox[
+           StyleBox["\<\"\[RightBracketingBar]\"\>",
+            FontColor->RGBColor[1, 0.5, 0]],
+           StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+         DisplayForm]}]}], 
+      RowBox[{"3", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq1"}], "+", "Eres"}], ")"}], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "Eq2"}], "+", "Eres"}], ")"}], "2"]}]], "+", 
+     FractionBox[
+      RowBox[{
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"1", "0", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm], 
+       StyleBox["\[CenterDot]",
+        FontColor->RGBColor[0, 1, 0]], 
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"1", "0", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm]}], 
+      RowBox[{"2", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"Eq1", "-", "Eres"}], ")"}], "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq2"}], "+", "Eres"}], ")"}]}]], "+", 
+     FractionBox[
+      RowBox[{
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"1", "0", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm], 
+       StyleBox["\[CenterDot]",
+        FontColor->RGBColor[0, 1, 0]], 
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"1", "0", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm]}], 
+      RowBox[{"8", " ", 
+       RowBox[{"(", 
+        RowBox[{"Eq1", "-", "Eres"}], ")"}], " ", 
+       RowBox[{"(", 
+        RowBox[{"Eq2", "-", "Eres"}], ")"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq2"}], "+", "Eres"}], ")"}]}]], "+", 
+     FractionBox[
+      RowBox[{
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"1", "0", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm], 
+       StyleBox["\[CenterDot]",
+        FontColor->RGBColor[0, 1, 0]], 
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"1", "0", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm]}], 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "Eq1"}], "+", "Eres"}], ")"}], "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq2"}], "+", "Eres"}], ")"}]}]], "+", 
+     FractionBox[
+      RowBox[{
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"1", "0", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm], 
+       StyleBox["\[CenterDot]",
+        FontColor->RGBColor[0, 1, 0]], 
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"1", "0", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm]}], 
+      RowBox[{"8", " ", 
+       RowBox[{"(", 
+        RowBox[{"Eq1", "-", "Eres"}], ")"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq1"}], "+", "Eres"}], ")"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq2"}], "+", "Eres"}], ")"}]}]], "-", 
+     FractionBox[
+      RowBox[{
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"1", "0", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm], 
+       StyleBox["\[CenterDot]",
+        FontColor->RGBColor[0, 1, 0]], 
+       TagBox[
+        RowBox[{
+         TagBox[
+          StyleBox["\<\"\[LeftAngleBracket]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ], 
+         RowBox[{"1", "0", "2"}], 
+         TagBox[
+          StyleBox["\<\"\[RightBracketingBar]\"\>",
+           FontColor->RGBColor[1, 0.5, 0]],
+          StyleForm[#, FontColor -> RGBColor[1, 0.5, 0]]& ]}],
+        DisplayForm]}], 
+      RowBox[{"8", " ", 
+       RowBox[{"(", 
+        RowBox[{"Eq2", "-", "Eres"}], ")"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq1"}], "+", "Eres"}], ")"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Eq2"}], "+", "Eres"}], ")"}]}]]}], ")"}]}]}]], "Output",\
+
+ CellChangeTimes->{
+  3.865687154167563*^9, 3.865687507708879*^9, 3.865687911862749*^9, 
+   3.865688016907906*^9, 3.865693082468144*^9, {3.865693268369404*^9, 
+   3.865693293462837*^9}, 3.865693465684965*^9, 3.865694653739131*^9, 
+   3.8656948632951*^9, 3.865695147111189*^9, 3.865696557117961*^9, 
+   3.865696703520412*^9, 3.8656967531636457`*^9},
+ CellLabel->"Out[83]=",ExpressionUUID->"992b5471-1ba1-4406-8714-9d06300563b8"]
+}, Open  ]]
+},
+WindowSize->{1331, 765},
+WindowMargins->{{44, Automatic}, {Automatic, 0}},
+PrintingCopies->1,
+PrintingPageRange->{1, Automatic},
+FrontEndVersion->"13.0 for Mac OS X x86 (64-bit) (December 2, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"ff5eaafa-0b24-4b2d-849a-546458641550"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 657, 12, 52, "Input",ExpressionUUID->"6af34e7e-e20b-4e95-aeb3-d85edb22a59f"],
+Cell[CellGroupData[{
+Cell[1262, 38, 1299, 20, 24, "Print",ExpressionUUID->"2d16238f-b155-41ba-a848-de31d68cd2b1"],
+Cell[2564, 60, 1301, 20, 24, "Print",ExpressionUUID->"00e79aeb-bebb-478c-bb99-dc6b52bc5abb"]
+}, Open  ]]
+}, Open  ]],
+Cell[3892, 84, 251, 5, 61, "Text",ExpressionUUID->"ef4ceaca-48cc-4f0e-8d60-f6fd2b0a93b0"],
+Cell[4146, 91, 195, 4, 46, "Text",ExpressionUUID->"482df71d-516c-43c8-922e-413eea710a24"],
+Cell[4344, 97, 5761, 150, 269, "Input",ExpressionUUID->"528d7ffc-6558-46c5-aee7-26d1c3e1702e"],
+Cell[10108, 249, 244, 5, 46, "Text",ExpressionUUID->"f97b144b-c332-46ae-ad30-601a7526b273"],
+Cell[CellGroupData[{
+Cell[10377, 258, 2112, 46, 117, "Input",ExpressionUUID->"9462b0d8-d766-4857-b34f-36a04d1adb92"],
+Cell[12492, 306, 5391, 150, 54, "Output",ExpressionUUID->"1b42aebf-08bd-4241-a1aa-70b393e2d90a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17920, 461, 981, 23, 54, "Input",ExpressionUUID->"e9c2250d-5efe-4c0a-b7e4-1286d25fe84f"],
+Cell[18904, 486, 2962, 89, 84, "Output",ExpressionUUID->"15ba7e27-c4af-4c57-ab70-8fc3e52762b4"]
+}, Open  ]],
+Cell[21881, 578, 1217, 32, 54, "Input",ExpressionUUID->"4cb94191-f521-4e83-9b78-e1c6969589a5"],
+Cell[CellGroupData[{
+Cell[23123, 614, 179, 3, 30, "Input",ExpressionUUID->"43f679e1-df92-4d22-b30d-f840e78ffb64"],
+Cell[23305, 619, 7729, 230, 211, "Output",ExpressionUUID->"561f6dfd-1be3-4044-a8ab-a7f6576fc887"]
+}, Open  ]],
+Cell[31049, 852, 299, 5, 61, "Text",ExpressionUUID->"1ab4c72e-f878-44c9-b2ae-907aa6e0dcdc"],
+Cell[31351, 859, 195, 4, 46, "Text",ExpressionUUID->"1c075109-06f4-44d5-b02d-db5030bc7fd9"],
+Cell[31549, 865, 4812, 125, 204, "Input",ExpressionUUID->"7de30fb1-80d7-4713-bb00-e6bca6bb5fb4"],
+Cell[36364, 992, 244, 5, 46, "Text",ExpressionUUID->"50519e84-5ad0-4008-8e44-de994e6f8f2a"],
+Cell[36611, 999, 1374, 37, 73, "Input",ExpressionUUID->"e3028467-6e60-4eca-b4a0-22d9a94aa780"],
+Cell[CellGroupData[{
+Cell[38010, 1040, 502, 12, 33, "Input",ExpressionUUID->"c5183995-3838-4a12-b8b6-8db57b38971a"],
+Cell[38515, 1054, 13535, 382, 136, "Output",ExpressionUUID->"18dc9929-7855-41fb-a755-05ef4d72bfd2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[52087, 1441, 838, 20, 33, "Input",ExpressionUUID->"5da92231-4776-4ce5-ae0f-b8573fc2021e"],
+Cell[52928, 1463, 85801, 2453, 738, "Output",ExpressionUUID->"992b5471-1ba1-4406-8714-9d06300563b8"]
+}, Open  ]]
+}
+]
+*)
+
